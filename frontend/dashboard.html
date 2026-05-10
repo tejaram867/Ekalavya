@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekalavya - Knowledge Empowers | Collaborative Learning Platform</title>
+    <meta name="description"
+        content="Ekalavya is the next-generation edutech platform for scholars. Learn, connect, and grow with peer-to-peer mentoring and smart scholarship matching.">
+    <meta name="keywords" content="education, mentoring, scholarship, collaborative learning, pwa, edutech">
+    <meta name="author" content="Ekalavya Platform">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ekalavya.edu/">
+    <meta property="og:title" content="Ekalavya - Knowledge Empowers">
+    <meta property="og:description"
+        content="The next-generation edutech platform designed for interactive skill development and peer-to-peer mentoring.">
+    <meta property="og:image" content="public/Logo.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ekalavya.edu/">
+    <meta property="twitter:title" content="Ekalavya - Knowledge Empowers">
+    <meta property="twitter:description"
+        content="The next-generation edutech platform designed for interactive skill development and peer-to-peer mentoring.">
+    <meta property="twitter:image" content="public/Logo.jpeg">
+
+    <!-- Tailwind CDN â€” required for all utility classes used throughout the project -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/assets/styles/style.css">
+    <script src="https://unpkg.com/lucide@latest" onload="if(window.lucide) window.lucide.createIcons()"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ekalavya-gold': '#f4c430',
+                        'ekalavya-black': '#000000',
+                        'ekalavya-black-dark': '#0a0a0a',
+                        'ekalavya-slate': '#94a3b8',
+                    },
+                    backgroundImage: {
+                        'gold-gradient': 'linear-gradient(135deg, #f4c430 0%, #d4a017 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-ekalavya-black text-ekalavya-slate font-['Poppins']">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+
+
+
+    <!-- Main Content Area (Managed by Router) -->
+    <main id="app-view" class="transition-container">
+        <!-- Content will be injected here -->
+    </main>
+
+
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal-fixed hidden">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-gold-accent"></div>
+            <button id="close-modal" class="modal-close-btn hover:text-white transition-colors">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="text-center mb-10">
+                <div class="logo-container mx-auto mb-6 scale-125">
+                    <img src="../public/Logo.jpeg" alt="Logo" class="logo-img">
+                </div>
+                <h2 class="text-3xl font-bold mb-3 text-white" id="auth-modal-title">Scholar Access</h2>
+                <p class="secondary-header-text text-sm" id="auth-modal-subtitle">Welcome back, scholar</p>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <button
+                    class="w-full py-4 bg-white/5 border border-white/10 text-white rounded-2xl flex items-center justify-center gap-3 transition-all hover:bg-white/10 group"
+                    id="google-auth-btn">
+                    <img src="https://www.google.com/favicon.ico" class="w-5 h-5" alt="Google">
+                    <span class="font-bold">Continue with Google</span>
+                </button>
+
+                <div class="modal-gateway-divider">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-white/5"></div>
+                    </div>
+                    <span>secure gateway</span>
+                </div>
+
+                <!-- Auth Error Display -->
+                <div id="auth-error"
+                    class="hidden text-red-400 text-xs font-bold text-center bg-red-400/10 border border-red-400/20 rounded-xl px-4 py-3">
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <div class="modal-input-group">
+                        <label class="text-[10px] text-white/40 uppercase font-bold tracking-widest ml-1">Email
+                            Address</label>
+                        <input type="email" placeholder="scholar@ekalavya.edu" class="modal-input" id="auth-email"
+                            autocomplete="email">
+                    </div>
+                    <div class="modal-input-group">
+                        <label
+                            class="text-[10px] text-white/40 uppercase font-bold tracking-widest ml-1">Password</label>
+                        <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" class="modal-input" id="auth-password"
+                            autocomplete="current-password">
+                    </div>
+                    <!-- Confirm Password (only visible in Register mode) -->
+                    <div class="modal-input-group hidden" id="password-confirm-group">
+                        <label class="text-[10px] text-white/40 uppercase font-bold tracking-widest ml-1">Confirm
+                            Password</label>
+                        <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" class="modal-input" id="auth-password-confirm"
+                            autocomplete="new-password">
+                    </div>
+                    <button
+                        class="bg-gold-gradient font-bold w-full py-4 text-black rounded-2xl shadow-lg shadow-ekalavya-gold/20 hover:scale-[1.02] active:scale-95 transition-all mt-2"
+                        id="email-auth-btn">
+                        Enter Platform
+                    </button>
+                </div>
+            </div>
+
+            <p class="text-center mt-6 text-xs text-white/40" id="auth-mode-toggle">
+                Don't have an account? <span class="text-ekalavya-gold cursor-pointer hover:underline"
+                    id="toggle-auth-link">Create One</span>
+            </p>
+            <p class="text-center mt-6 text-[10px] text-white/20 font-bold uppercase tracking-widest">
+                Protected by EKALAVYA Security Protocol
+            </p>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal-fixed hidden">
+        <div class="modal-overlay" id="profile-modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-gold-accent"></div>
+            <button id="close-profile-modal" class="modal-close-btn hover:text-white transition-colors">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-3 text-white">Identify Protocol</h2>
+                <p class="secondary-header-text text-sm">Personalize your scholar profile</p>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <div class="modal-input-group">
+                    <label class="text-[10px] text-white/40 uppercase font-bold tracking-widest ml-1">Scholar
+                        Name</label>
+                    <input type="text" placeholder="Your Name" class="modal-input" id="profile-name">
+                </div>
+
+                <div class="modal-input-group">
+                    <label class="text-[10px] text-white/40 uppercase font-bold tracking-widest ml-1">Avatar Frequency
+                        (Seed)</label>
+                    <input type="text" placeholder="Unique name for avatar" class="modal-input"
+                        id="profile-avatar-seed">
+                    <p class="text-[10px] text-ekalavya-gold/60 font-bold italic mt-2 ml-1">Modifying this synchronizes
+                        a new visual identity</p>
+                </div>
+
+                <div class="pt-4 flex flex-col gap-3">
+                    <button
+                        class="bg-gold-gradient font-bold w-full py-4 text-black rounded-2xl shadow-lg shadow-ekalavya-gold/20 hover:scale-[1.02] active:scale-95 transition-all"
+                        id="save-profile-btn">
+                        Synchronize Profile
+                    </button>
+                    <button
+                        class="w-full py-4 bg-white/5 border border-white/10 text-white/50 rounded-2xl flex items-center justify-center gap-2 hover:bg-white/10 hover:text-white transition-all text-xs font-bold uppercase tracking-widest"
+                        id="share-portfolio-btn">
+                        <i data-lucide="share-2" class="w-4 h-4"></i>
+                        Share Achievements
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div><!-- end #app -->
+    <script type="module" src="../src/pages/dashboard.js"></script>
+    <script>
+        function handleNewsletterSignup() {
+            const input = document.getElementById('newsletter-email');
+            if (!input) return;
+            const email = input.value.trim();
+            if (!email || !email.includes('@')) {
+                input.style.borderColor = '#ef4444';
+                setTimeout(() => { input.style.borderColor = ''; }, 2000);
+                return;
+            }
+            input.value = '';
+            const btn = input.nextElementSibling;
+            const orig = btn.textContent;
+            btn.textContent = 'Subscribed!';
+            btn.style.background = 'rgba(16,185,129,0.8)';
+            setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 3000);
+        }
+    </script>
+</body>
+
+</html>
+
