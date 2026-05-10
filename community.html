@@ -16,7 +16,7 @@
     <meta property="og:title" content="Ekalavya - Knowledge Empowers">
     <meta property="og:description"
         content="The next-generation edutech platform designed for interactive skill development and peer-to-peer mentoring.">
-    <meta property="og:image" content="../public/Logo.jpeg">
+    <meta property="og:image" content="public/Logo.jpeg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -24,11 +24,11 @@
     <meta property="twitter:title" content="Ekalavya - Knowledge Empowers">
     <meta property="twitter:description"
         content="The next-generation edutech platform designed for interactive skill development and peer-to-peer mentoring.">
-    <meta property="twitter:image" content="../public/Logo.jpeg">
+    <meta property="twitter:image" content="public/Logo.jpeg">
 
     <!-- Tailwind CDN â€” required for all utility classes used throughout the project -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../src/assets/styles/style.css">
+    <link rel="stylesheet" href="./src/assets/styles/style.css">
     <script src="https://unpkg.com/lucide@latest" onload="if(window.lucide) window.lucide.createIcons()"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -58,18 +58,17 @@
     <header class="header-fixed" id="header">
         <nav class="pill-nav" id="pill-nav">
             <a href="index.html" class="flex-center logo-container hover:scale-110 transition-transform" id="pill-logo">
-                <img src="../public/Logo.jpeg" alt="EKALAVYA Logo" class="logo-img">
+                <img src="./public/Logo.jpeg" alt="EKALAVYA Logo" class="logo-img">
             </a>
 
             <!-- Desktop Nav -->
             <div class="flex items-center" id="md-nav">
                 <ul class="flex items-center gap-1" role="menubar">
-                    <li><a href="#home" class="nav-pill active" data-i18n="nav.home">Home</a></li>
-                    <li><a href="#ecosystem" class="nav-pill" data-i18n="nav.ecosystem">Ecosystem</a></li>
-                    <li><a href="#about" class="nav-pill" data-i18n="nav.about">About</a></li>
-                    <li><a href="#path" class="nav-pill" data-i18n="nav.path">Path</a></li>
-                    <li><a href="#team" class="nav-pill" data-i18n="nav.team">Team</a></li>
-                    <li><a href="#faq" class="nav-pill" data-i18n="nav.faq">FAQ</a></li>
+                    <li><a href="index.html" class="nav-pill" data-i18n="nav.home">Home</a></li>
+                    <li><a href="scholarships.html" class="nav-pill" data-i18n="nav.scholarships">Scholarships</a></li>
+                    <li><a href="mentors.html" class="nav-pill" data-i18n="nav.mentoring">Mentoring</a></li>
+                    <li><a href="community.html" class="nav-pill active" data-i18n="nav.peer_connect">Peer Connect</a></li>
+                    <li><a href="library.html" class="nav-pill" data-i18n="nav.library">Library</a></li>
                 </ul>
             </div>
 
@@ -121,17 +120,23 @@
                 <!-- Brand col -->
                 <div class="footer-brand-col">
                     <div class="flex items-center gap-3" style="margin-bottom:1.25rem;">
-                        <div class="logo-container"><img src="../public/Logo.jpeg" alt="Ekalavya" class="logo-img"></div>
+                        <div class="logo-container"><img src="./public/Logo.jpeg" alt="Ekalavya" class="logo-img"></div>
                         <span
                             style="font-size:1.25rem;font-weight:700;color:#fff;letter-spacing:-0.02em;">Ekalavya</span>
                     </div>
                     <p style="color:rgba(255,255,255,0.4);font-size:0.875rem;line-height:1.7;margin-bottom:1.5rem;">
-                        Empowering Every Student. Everywhere.<br>A free platform for Class 6–12 and undergraduate students across India.</p>
-                    <p style="color:rgba(255,255,255,0.25);font-size:0.75rem;line-height:1.6;">Hyderabad, Telangana, India</p>
+                        Empowering Every Student. Everywhere.<br>Free platform for Class 6â€“12 and undergraduate students across India.</p>
+                    <p style="color:rgba(255,255,255,0.25);font-size:0.75rem;line-height:1.6;">Hyderabad, Telangana,
+                        India</p>
                     <div class="footer-socials">
-                        <a href="#" class="footer-social-btn linkedin" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px;"></i></a>
-                        <a href="mailto:contact@ekalavya.edu" class="footer-social-btn mail" aria-label="Email"><i data-lucide="mail" style="width:18px;height:18px;"></i></a>
-                        <a href="#" class="footer-social-btn instagram" aria-label="Instagram"><i data-lucide="instagram" style="width:18px;height:18px;"></i></a>
+                        <a href="#" class="footer-social-btn github" aria-label="GitHub"><i data-lucide="github"
+                                style="width:16px;height:16px;"></i></a>
+                        <a href="#" class="footer-social-btn twitter" aria-label="Twitter"><i data-lucide="twitter"
+                                style="width:16px;height:16px;"></i></a>
+                        <a href="#" class="footer-social-btn linkedin" aria-label="LinkedIn"><i data-lucide="linkedin"
+                                style="width:16px;height:16px;"></i></a>
+                        <a href="#" class="footer-social-btn instagram" aria-label="Instagram"><i data-lucide="instagram"
+                                style="width:16px;height:16px;"></i></a>
                     </div>
                 </div>
 
@@ -139,11 +144,11 @@
                 <div>
                     <h5 class="footer-col-title">Platform</h5>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#ecosystem">Scholarship Hub</a></li>
-                        <li><a href="#about">Skill-Based Mentoring</a></li>
-                        <li><a href="#path">Peer Connect</a></li>
-                        <li><a href="#ecosystem">Academic Library</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="scholarships.html">Scholarship Hub</a></li>
+                        <li><a href="mentors.html">Skill-Based Mentoring</a></li>
+                        <li><a href="community.html">Peer Connect</a></li>
+                        <li><a href="library.html">Academic Library</a></li>
                         <li><a href="dashboard.html">My Dashboard</a></li>
                     </ul>
                 </div>
@@ -186,15 +191,15 @@
             <button id="close-modal" class="modal-close-btn hover:text-white transition-colors">
                 <i data-lucide="x"></i>
             </button>
-            <div class="text-center mb-6">
+            <div class="text-center mb-10">
                 <div class="logo-container mx-auto mb-6 scale-125">
-                    <img src="../public/Logo.jpeg" alt="Logo" class="logo-img">
+                    <img src="./public/Logo.jpeg" alt="Logo" class="logo-img">
                 </div>
                 <h2 class="text-3xl font-bold mb-3 text-white" id="auth-modal-title">Scholar Access</h2>
                 <p class="secondary-header-text text-sm" id="auth-modal-subtitle">Welcome back, scholar</p>
             </div>
 
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-6">
                 <button
                     class="w-full py-4 bg-white/5 border border-white/10 text-white rounded-2xl flex items-center justify-center gap-3 transition-all hover:bg-white/10 group"
                     id="google-auth-btn">
@@ -214,7 +219,7 @@
                     class="hidden text-red-400 text-xs font-bold text-center bg-red-400/10 border border-red-400/20 rounded-xl px-4 py-3">
                 </div>
 
-                <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-4">
                     <div class="modal-input-group">
                         <label class="text-[10px] text-white/40 uppercase font-bold tracking-widest ml-1">Email
                             Address</label>
@@ -224,14 +229,14 @@
                     <div class="modal-input-group">
                         <label
                             class="text-[10px] text-white/40 uppercase font-bold tracking-widest ml-1">Password</label>
-                        <input type="password" placeholder="Enter password" class="modal-input" id="auth-password"
+                        <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" class="modal-input" id="auth-password"
                             autocomplete="current-password">
                     </div>
                     <!-- Confirm Password (only visible in Register mode) -->
                     <div class="modal-input-group hidden" id="password-confirm-group">
                         <label class="text-[10px] text-white/40 uppercase font-bold tracking-widest ml-1">Confirm
                             Password</label>
-                        <input type="password" placeholder="Confirm password" class="modal-input" id="auth-password-confirm"
+                        <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" class="modal-input" id="auth-password-confirm"
                             autocomplete="new-password">
                     </div>
                     <button
@@ -242,7 +247,7 @@
                 </div>
             </div>
 
-            <p class="text-center mt-4 text-xs text-white/40" id="auth-mode-toggle">
+            <p class="text-center mt-6 text-xs text-white/40" id="auth-mode-toggle">
                 Don't have an account? <span class="text-ekalavya-gold cursor-pointer hover:underline"
                     id="toggle-auth-link">Create One</span>
             </p>
@@ -299,7 +304,7 @@
     </div>
 
     </div><!-- end #app -->
-    <script type="module" src="../src/pages/index.js"></script>
+    <script type="module" src="./src/pages/community.js"></script>
     <script>
         function handleNewsletterSignup() {
             const input = document.getElementById('newsletter-email');

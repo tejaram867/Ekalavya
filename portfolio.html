@@ -28,7 +28,7 @@
 
     <!-- Tailwind CDN â€” required for all utility classes used throughout the project -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../src/assets/styles/style.css">
+    <link rel="stylesheet" href="./src/assets/styles/style.css">
     <script src="https://unpkg.com/lucide@latest" onload="if(window.lucide) window.lucide.createIcons()"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -54,15 +54,134 @@
     <div class="bg-orb orb-1"></div>
     <div class="bg-orb orb-2"></div>
 
+    <!-- Header Navigation -->
+    <header class="header-fixed" id="header">
+        <nav class="pill-nav" id="pill-nav">
+            <a href="index.html" class="flex-center logo-container hover:scale-110 transition-transform" id="pill-logo">
+                <img src="./public/Logo.jpeg" alt="EKALAVYA Logo" class="logo-img">
+            </a>
 
+            <!-- Desktop Nav -->
+            <div class="flex items-center" id="md-nav">
+                <ul class="flex items-center gap-1" role="menubar">
+                    <li><a href="index.html" class="nav-pill" data-i18n="nav.home">Home</a></li>
+                    <li><a href="scholarships.html" class="nav-pill" data-i18n="nav.scholarships">Scholarships</a></li>
+                    <li><a href="mentors.html" class="nav-pill" data-i18n="nav.mentoring">Mentoring</a></li>
+                    <li><a href="community.html" class="nav-pill" data-i18n="nav.peer_connect">Peer Connect</a></li>
+                    <li><a href="library.html" class="nav-pill" data-i18n="nav.library">Library</a></li>
+                </ul>
+            </div>
 
+            <!-- Auth/Profile Section -->
+            <div class="flex items-center gap-2" id="auth-section"
+                style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1rem; margin-left: 0.5rem;">
+                <button class="nav-pill-outline" id="login-nav-btn">Login</button>
+                <button class="nav-pill-primary" id="register-nav-btn">Join Now</button>
+            </div>
+
+            <button class="flex-center lg:hidden hidden" id="mobile-toggle">
+                <div class="flex flex-col gap-1.5">
+                    <span class="w-5 h-0.5 bg-white rounded-sm"></span>
+                    <span class="w-5 h-0.5 bg-white rounded-sm"></span>
+                </div>
+            </button>
+        </nav>
+    </header>
 
     <!-- Main Content Area (Managed by Router) -->
     <main id="app-view" class="transition-container">
         <!-- Content will be injected here -->
     </main>
 
+    <!-- Footer -->
+    <footer class="footer-main">
+        <!-- Newsletter Strip -->
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="footer-newsletter-inner">
+                    <div>
+                        <h4 class="footer-newsletter-title">Stay in the loop</h4>
+                        <p class="footer-newsletter-sub">New scholarships, mentor sessions and platform updates â€”
+                            straight to your inbox.</p>
+                    </div>
+                    <div class="footer-newsletter-form">
+                        <input type="email" placeholder="your@email.com" class="footer-email-input"
+                            id="newsletter-email" />
+                        <button class="cta-primary footer-subscribe-btn" onclick="handleNewsletterSignup()">Get
+                            Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Main Footer Grid -->
+        <div class="container footer-grid-wrap">
+            <div class="footer-grid">
+                <!-- Brand col -->
+                <div class="footer-brand-col">
+                    <div class="flex items-center gap-3" style="margin-bottom:1.25rem;">
+                        <div class="logo-container"><img src="./public/Logo.jpeg" alt="Ekalavya" class="logo-img"></div>
+                        <span
+                            style="font-size:1.25rem;font-weight:700;color:#fff;letter-spacing:-0.02em;">Ekalavya</span>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.4);font-size:0.875rem;line-height:1.7;margin-bottom:1.5rem;">
+                        Empowering Every Student. Everywhere.<br>Free platform for Class 6â€“12 and undergraduate students across India.</p>
+                    <p style="color:rgba(255,255,255,0.25);font-size:0.75rem;line-height:1.6;">Hyderabad, Telangana,
+                        India</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-btn github" aria-label="GitHub"><i data-lucide="github"
+                                style="width:16px;height:16px;"></i></a>
+                        <a href="#" class="footer-social-btn twitter" aria-label="Twitter"><i data-lucide="twitter"
+                                style="width:16px;height:16px;"></i></a>
+                        <a href="#" class="footer-social-btn linkedin" aria-label="LinkedIn"><i data-lucide="linkedin"
+                                style="width:16px;height:16px;"></i></a>
+                        <a href="#" class="footer-social-btn instagram" aria-label="Instagram"><i data-lucide="instagram"
+                                style="width:16px;height:16px;"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="footer-col-title">Platform</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="scholarships.html">Scholarship Hub</a></li>
+                        <li><a href="mentors.html">Skill-Based Mentoring</a></li>
+                        <li><a href="community.html">Peer Connect</a></li>
+                        <li><a href="library.html">Academic Library</a></li>
+                        <li><a href="dashboard.html">My Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h5 class="footer-col-title">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#institutions">For Institutions</a></li>
+                        <li><a href="mailto:hello@ekalavya.edu">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h5 class="footer-col-title">Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ekalavya Platform. All rights reserved.</p>
+                <p>Made with love for scholars everywhere.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Auth Modal -->
     <div id="auth-modal" class="modal-fixed hidden">
@@ -74,7 +193,7 @@
             </button>
             <div class="text-center mb-10">
                 <div class="logo-container mx-auto mb-6 scale-125">
-                    <img src="../public/Logo.jpeg" alt="Logo" class="logo-img">
+                    <img src="./public/Logo.jpeg" alt="Logo" class="logo-img">
                 </div>
                 <h2 class="text-3xl font-bold mb-3 text-white" id="auth-modal-title">Scholar Access</h2>
                 <p class="secondary-header-text text-sm" id="auth-modal-subtitle">Welcome back, scholar</p>
@@ -185,7 +304,7 @@
     </div>
 
     </div><!-- end #app -->
-    <script type="module" src="../src/pages/dashboard.js"></script>
+    <script type="module" src="./src/pages/portfolio.js"></script>
     <script>
         function handleNewsletterSignup() {
             const input = document.getElementById('newsletter-email');

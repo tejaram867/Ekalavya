@@ -28,7 +28,7 @@
 
     <!-- Tailwind CDN â€” required for all utility classes used throughout the project -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../src/assets/styles/style.css">
+    <link rel="stylesheet" href="./src/assets/styles/style.css">
     <script src="https://unpkg.com/lucide@latest" onload="if(window.lucide) window.lucide.createIcons()"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -58,7 +58,7 @@
     <header class="header-fixed" id="header">
         <nav class="pill-nav" id="pill-nav">
             <a href="index.html" class="flex-center logo-container hover:scale-110 transition-transform" id="pill-logo">
-                <img src="../public/Logo.jpeg" alt="EKALAVYA Logo" class="logo-img">
+                <img src="./public/Logo.jpeg" alt="EKALAVYA Logo" class="logo-img">
             </a>
 
             <!-- Desktop Nav -->
@@ -68,7 +68,7 @@
                     <li><a href="scholarships.html" class="nav-pill" data-i18n="nav.scholarships">Scholarships</a></li>
                     <li><a href="mentors.html" class="nav-pill" data-i18n="nav.mentoring">Mentoring</a></li>
                     <li><a href="community.html" class="nav-pill" data-i18n="nav.peer_connect">Peer Connect</a></li>
-                    <li><a href="library.html" class="nav-pill active" data-i18n="nav.library">Library</a></li>
+                    <li><a href="library.html" class="nav-pill" data-i18n="nav.library">Library</a></li>
                 </ul>
             </div>
 
@@ -120,7 +120,7 @@
                 <!-- Brand col -->
                 <div class="footer-brand-col">
                     <div class="flex items-center gap-3" style="margin-bottom:1.25rem;">
-                        <div class="logo-container"><img src="../public/Logo.jpeg" alt="Ekalavya" class="logo-img"></div>
+                        <div class="logo-container"><img src="./public/Logo.jpeg" alt="Ekalavya" class="logo-img"></div>
                         <span
                             style="font-size:1.25rem;font-weight:700;color:#fff;letter-spacing:-0.02em;">Ekalavya</span>
                     </div>
@@ -193,7 +193,7 @@
             </button>
             <div class="text-center mb-10">
                 <div class="logo-container mx-auto mb-6 scale-125">
-                    <img src="../public/Logo.jpeg" alt="Logo" class="logo-img">
+                    <img src="./public/Logo.jpeg" alt="Logo" class="logo-img">
                 </div>
                 <h2 class="text-3xl font-bold mb-3 text-white" id="auth-modal-title">Scholar Access</h2>
                 <p class="secondary-header-text text-sm" id="auth-modal-subtitle">Welcome back, scholar</p>
@@ -304,7 +304,7 @@
     </div>
 
     </div><!-- end #app -->
-    <script type="module" src="../src/pages/library.js"></script>
+    <script type="module" src="./src/pages/admin.js"></script>
     <script>
         function handleNewsletterSignup() {
             const input = document.getElementById('newsletter-email');
